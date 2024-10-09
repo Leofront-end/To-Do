@@ -1,0 +1,101 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+header{
+    background-color: #D9D9D9;
+    text-align: center;
+    width: 100vw;
+    height: 40px;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+#Tarefas {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px auto;
+    background-color: #D9D9D9;
+    border-radius: 50px;
+    width: 500px;
+    
+}
+
+input {
+    width: 75%;
+    height: 20px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.Enviar{
+    margin-top: 25px;
+    width: 75%;
+    height: 50px;
+    border-radius: 15px;
+    background-color: #BAEABB;
+}
+
+.Enviar:hover {
+    background-color: #32da32;
+    transition: all 1s;
+}
+
+h2 {
+    text-align: center;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    margin: 5px ;
+    flex-wrap: wrap;
+}
+
+li {
+    width: 150px;
+    height: 300px;
+
+    border-radius: 5px;
+
+    background-color: #D9D9D9;
+
+    margin: 5px;
+    padding: 5px;
+
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+h3 {
+    text-align: center;
+}
+
+p {
+    margin-top: 5px;
+    text-align: justify;
+}
+
+li>div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 5px auto;
+    width: 75%;
+}
+
+div > button {
+    height: 25px;
+    border-radius: 5px;
+}
+
+.Concluido {
+    background-color: #BAEABB;
+}

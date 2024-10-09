@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>To-Do List </title>
+  </head>
+  <body>
+    <header>
+      <h1>Lista de Tarefas</h1>
+    </header>
+    <main>
+      <form id="Tarefas">
+        <label for="NomeTarefa">Nome</label>
+        <input type="text" name="NomeTarefa" id="NomeTarefa" required>
+
+        <label for="DescricaoTarefa">Descrição</label>
+        <input type="text" name="DescricaoTarefa" id="DescricaoTarefa" required>
+
+        <input type="submit" value="Enviar" class="Enviar">
+      </form>
+
+      <h2>Lista</h2>
+      <ul id="To-DoList">
+        <p>A lista está vazia</p>
+      </ul>
+    </main>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
