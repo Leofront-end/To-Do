@@ -6,8 +6,8 @@ const ListaTarefas = document.getElementById("To-DoList")
 
 carregarTarefa()
 
-Tarefas.addEventListener("submit", function (evento) {
-  evento.preventDefault()
+Tarefas.addEventListener("submit",  () => {
+
   const nomeTarefa = nome.value
   const descricaoTarefa = descricao.value
   const Concluir = "False"
@@ -38,6 +38,7 @@ async function carregarTarefa() {
 }
 
 async function exibirTarefas(tarefas) {
+  
   ListaTarefas.innerHTML = ""
   tarefas.forEach((tarefa) => {
     const cardsTarefas = document.createElement("li")
@@ -52,11 +53,13 @@ async function exibirTarefas(tarefas) {
 
     const editar = document.createElement("button")
     editar.textContent = "Editar Descricao"
+    editar.className = "Edit"
     editar.addEventListener("click", () => editarTarefa(tarefa))
 
     const excluir = document.createElement("button")
     excluir.textContent = "Deletar"
-    excluir.addEventListener("click", () => deletarTarefa(tarefa.id))
+    excluir.className = "Delete"
+    excluir.addEventListener("click", () => deletarTarefa(tarefa) )
 
     botoes.append(editar, excluir)
     
@@ -64,6 +67,7 @@ async function exibirTarefas(tarefas) {
     if (tarefa.Concluir == "False")  {
       const concluir = document.createElement("button")
       concluir.textContent = "Concluido"
+      concluir.className = "Concluir"
       concluir.addEventListener("click", () => Concluido(tarefa))
 
       botoes.append(concluir)
@@ -72,10 +76,11 @@ async function exibirTarefas(tarefas) {
     }
     
 
-
     cardsTarefas.append(titulo, descricao, botoes)
     ListaTarefas.append(cardsTarefas)
   });
+  
+  
 }
 
 async function editarTarefa(tarefa) {
@@ -90,8 +95,8 @@ async function editarTarefa(tarefa) {
   })
 }
 
-async function deletarTarefa(id) {
-  await fetch(`http://localhost:3000/List/${id}`, {
+async function deletarTarefa(tarefa) {
+  await fetch(`http://localhost:3000/List/${tarefa.id}`, {
     method: "DELETE"
   })
 }

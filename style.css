@@ -99,3 +99,18 @@ div > button {
 .Concluido {
     background-color: #BAEABB;
 }
+
+.Delete:hover {
+    background-color: red;
+    transition: all 2s;
+}
+
+.Edit:hover {
+    background-color: rgb(75, 75, 75);
+    transition: all 2s;
+}
+
+.Concluir:hover {
+    background-color: #32da32;
+    transition: all 2s;
+}
